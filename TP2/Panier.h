@@ -39,8 +39,7 @@ private:
 	double totalAPayer_;
 
 	// TODO: Remplacer ces attributs par un vecteur de la STL
-	Produit ** contenuPanier_;
-	int  nombreContenu_;
-	int capaciteContenu_;
+	vector <Produit*> contenuPanier_;
+
 
 };

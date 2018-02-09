@@ -19,6 +19,7 @@ public:
 	~Client();
 
 	// TODO: Ajouter un constructeur par copie si necessaire
+	Client(const Client& copie);
 
 	string obtenirNom() const;
 	string obtenirPrenom() const;

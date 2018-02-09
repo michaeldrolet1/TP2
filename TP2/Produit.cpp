@@ -54,12 +54,24 @@ void Produit::modifierPrix(double prix)
 		<< endl;
 	}
 
+// Methode d'entre
+	istream& operator>>(istream& i,const Produit& produit)
+	{
+		cout << "Saisissez les attributs pour un produit : ";
+		i << produit.modifierNom << produit.modifierReference << produit.modifierPrix << endl;
+	}
 // Methode de comparaison
 	bool Produit::operator==(const Produit &produit) const
 	{
 		return(nom_ == produit.obtenirNom() && reference_ == produit.obtenirReference() && prix_ == produit.obtenirPrix());
 	}
+
 	bool Produit::operator>(const Produit &produit)const 
 	{
-		return(prix_ > produit.obtenirPrix())
+		return(prix_ > produit.obtenirPrix());
+	}
+
+	bool Produit::operator<(const Produit &produit)const
+	{
+		return(prix_ < produit.obtenirPrix());
 	}
