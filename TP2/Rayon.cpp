@@ -40,10 +40,7 @@ void Rayon::ajouterProduit(Produit *produit)
 		<< endl;
 	for (int i = 0; i < rayon.tousProduits_.size();i++)
 	{
-		o << endl
-			<< "---->" << ;
-		
-
+		o << rayon.tousProduits_[i];
 		
 	}
 	return o;

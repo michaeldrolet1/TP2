@@ -24,10 +24,6 @@ Produit **  Panier::obtenirContenuPanier()const
 	return contenuPanier_;
 }
 
-int Panier::obtenirNombreContenu() const
-{
-	return nombreContenu_;
-}
 
 double Panier::obtenirTotalApayer() const
 {
@@ -62,10 +58,11 @@ Produit * Panier::trouverProduitPlusCher()
 	// TODO: Implementez la methode
 }
 
-void Panier::afficher() const
+ostream& operator<< (ostream& o, const Produit& prod)
 {
-	for (int i = 0; i < nombreContenu_; i++)
+	for (int i = 0; i < contenuPanier_.size(); i++)
 		contenuPanier_[i]->afficher();
+			o << prod.contenuPanier_[];
 
 	cout << "----> total a payer : " << totalAPayer_ << endl;
 }
