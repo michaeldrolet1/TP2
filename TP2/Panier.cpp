@@ -6,12 +6,10 @@
 
 #include "Panier.h"
 
-Panier::Panier(int capacite) :
-	capaciteContenu_{ capacite },
-	nombreContenu_{ 0 },
-	contenuPanier_{ new Produit *[capaciteContenu_] },
-	totalAPayer_{ 0 }
+Panier::Panier()
 {
+	totalAPayer_ = 0;
+
 }
 
 Panier::~Panier()
@@ -56,13 +54,20 @@ void Panier::livrer()
 Produit * Panier::trouverProduitPlusCher()
 {
 	// TODO: Implementez la methode
+	Produit* produitPlusCher = contenuPanier_[1]->obtenirPrix;
+	for (int i = 1; i < contenuPanier_.size(); i++)
+	{
+		if (contenuPanier_[i]->obtenirPrix < produitPlusCher)
+			 produitPlusCher = contenuPanier_[i];
+		return produitPlusCher;
+	}
 }
 
 ostream& operator<< (ostream& o, const Produit& prod)
 {
 	for (int i = 0; i < contenuPanier_.size(); i++)
 		contenuPanier_[i]->afficher();
-			o << prod.contenuPanier_[];
+			o << prod;
 
-	cout << "----> total a payer : " << totalAPayer_ << endl;
+	o << "----> total a payer : " << totalAPayer_ << endl;
 }

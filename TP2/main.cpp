@@ -26,9 +26,9 @@ int main()
 {
 	Produit* unProduit = new Produit();
 	// Faire saisir à l'utilisateur les attributs du produit unProduit selon le format de la capture d'écran de l'énoncé
-
+	cin >> unProduit;
 	// Afficher le Produit unProduit
-	
+	cout << unProduit;
 	// Creation de 15 produits
 	Produit * produits[NB_PRODUCTS];
 	double echantillonPrix[NB_PRODUCTS] = { 12.56, 50.0, 34.0, 56.0, 77.0, 91.0, 21.0, 34.0, 88.0, 65.0, 42.0, 72.0, 82.0, 53.0, 68.0 };
@@ -43,7 +43,7 @@ int main()
 
 	cout << "Le produit p20 est moins cher que le produit p1 ? ";
 	// Comparer le prix du produit p20 et p1 à l'aide de la surcharge d'un operateur
-
+	produits[2] > produits[1];
 	// Cration d'un rayon sport
 	Rayon sport;
 
@@ -51,13 +51,16 @@ int main()
 	sport.modifierCategorie("sport");
 
 	// Ajoutez les 10 premiers produits de dans le rayon créé
+	int nombreProduit = 10;
+	for (int i = 0; i <= nombreProduit; i++)
+		sport.ajouterProduit(produits[i]);
 
 	// Ajoutez encore une fois le produit p0 dans le rayon sport
-
+	sport.ajouterProduit[produits[0]];
 	// Affichez le contenu du rayon
 
 	// Affichez le nombre de doublons du premier produit dans le rayon sport
-
+	sport.compterDoublons(produits[0]);
 	// Creation d'un client
 	Client martine("Bellaiche", "Martine", 1111, "H2T3A6", 199004);
 

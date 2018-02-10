@@ -68,10 +68,16 @@ void Produit::modifierPrix(double prix)
 
 	bool Produit::operator>(const Produit &produit)const 
 	{
-		return(prix_ > produit.obtenirPrix());
+		if (prix_ > produit.obtenirPrix())
+			cout << "true" << endl;
+		else
+			cout << "false" << endl;
 	}
 
 	bool Produit::operator<(const Produit &produit)const
 	{
-		return(prix_ < produit.obtenirPrix());
+		if(prix_ < produit.obtenirPrix())
+			cout << "true" << endl;
+		else
+			cout << "false" << endl;;
 	}

@@ -17,7 +17,7 @@ class Panier
 
 public:
 	// TODO: Noubliez pas de retirer la capacite et donc transformer ce constructeur en constructeur par default
-	Panier(int capacite);
+	Panier();
 	~Panier();
 
 	Produit **  obtenirContenuPanier()const;

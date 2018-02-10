@@ -54,8 +54,11 @@ void Rayon::ajouterProduit(Produit *produit)
 
  int Rayon::compterDoublons(Produit* produit)
  {	
+	 int nombreDoublons = 0;
 	 for (int i = 0; i < tousProduits_.size(); i++)
 	 {
-		 if(produit == *this)
+		 if (produit == tousProduits_[i])
+			 nombreDoublons++;
 	 }
+	 cout << "Nombre de doublons du produit" + produit->obtenirNom + ":" + nombreDoublons;
  }
